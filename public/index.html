@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8" />
-  <title>stockfish-nnue.wasm</title>
+  <title>Dratini WASM</title>
   <meta
     name="viewport"
     content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"
   />
   <link rel="icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSI0NSIgaGVpZ2h0PSI0NSI+CiAgPGcgc3R5bGU9Im9wYWNpdHk6MTsgZmlsbDpub25lOyBmaWxsLW9wYWNpdHk6MTsgZmlsbC1ydWxlOmV2ZW5vZGQ7IHN0cm9rZTojMDAwMDAwOyBzdHJva2Utd2lkdGg6MS41OyBzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDsgc3Ryb2tlLWRhc2hhcnJheTpub25lOyBzdHJva2Utb3BhY2l0eToxOyI+CiAgICA8cGF0aAogICAgICBkPSJNIDIyLDEwIEMgMzIuNSwxMSAzOC41LDE4IDM4LDM5IEwgMTUsMzkgQyAxNSwzMCAyNSwzMi41IDIzLDE4IgogICAgICBzdHlsZT0iZmlsbDojMDAwMDAwOyBzdHJva2U6IzAwMDAwMDsiIC8+CiAgICA8cGF0aAogICAgICBkPSJNIDI0LDE4IEMgMjQuMzgsMjAuOTEgMTguNDUsMjUuMzcgMTYsMjcgQyAxMywyOSAxMy4xOCwzMS4zNCAxMSwzMSBDIDkuOTU4LDMwLjA2IDEyLjQxLDI3Ljk2IDExLDI4IEMgMTAsMjggMTEuMTksMjkuMjMgMTAsMzAgQyA5LDMwIDUuOTk3LDMxIDYsMjYgQyA2LDI0IDEyLDE0IDEyLDE0IEMgMTIsMTQgMTMuODksMTIuMSAxNCwxMC41IEMgMTMuMjcsOS41MDYgMTMuNSw4LjUgMTMuNSw3LjUgQyAxNC41LDYuNSAxNi41LDEwIDE2LjUsMTAgTCAxOC41LDEwIEMgMTguNSwxMCAxOS4yOCw4LjAwOCAyMSw3IEMgMjIsNyAyMiwxMCAyMiwxMCIKICAgICAgc3R5bGU9ImZpbGw6IzAwMDAwMDsgc3Ryb2tlOiMwMDAwMDA7IiAvPgogICAgPHBhdGgKICAgICAgZD0iTSA5LjUgMjUuNSBBIDAuNSAwLjUgMCAxIDEgOC41LDI1LjUgQSAwLjUgMC41IDAgMSAxIDkuNSAyNS41IHoiCiAgICAgIHN0eWxlPSJmaWxsOiNmZmZmZmY7IHN0cm9rZTojZmZmZmZmOyIgLz4KICAgIDxwYXRoCiAgICAgIGQ9Ik0gMTUgMTUuNSBBIDAuNSAxLjUgMCAxIDEgIDE0LDE1LjUgQSAwLjUgMS41IDAgMSAxICAxNSAxNS41IHoiCiAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDAuODY2LDAuNSwtMC41LDAuODY2LDkuNjkzLC01LjE3MykiCiAgICAgIHN0eWxlPSJmaWxsOiNmZmZmZmY7IHN0cm9rZTojZmZmZmZmOyIgLz4KICAgIDxwYXRoCiAgICAgIGQ9Ik0gMjQuNTUsMTAuNCBMIDI0LjEsMTEuODUgTCAyNC42LDEyIEMgMjcuNzUsMTMgMzAuMjUsMTQuNDkgMzIuNSwxOC43NSBDIDM0Ljc1LDIzLjAxIDM1Ljc1LDI5LjA2IDM1LjI1LDM5IEwgMzUuMiwzOS41IEwgMzcuNDUsMzkuNSBMIDM3LjUsMzkgQyAzOCwyOC45NCAzNi42MiwyMi4xNSAzNC4yNSwxNy42NiBDIDMxLjg4LDEzLjE3IDI4LjQ2LDExLjAyIDI1LjA2LDEwLjUgTCAyNC41NSwxMC40IHogIgogICAgICBzdHlsZT0iZmlsbDojZmZmZmZmOyBzdHJva2U6bm9uZTsiIC8+CiAgPC9nPgo8L3N2Zz4K"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"/>
-  <link rel="stylesheet"
-      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
-      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
-      crossorigin="anonymous">
+  <link rel="stylesheet" href="./chessboard-1.0.0.min.css"></script>
 </head>
 
 <!-- CSS -->
@@ -102,7 +99,7 @@
 <body>
   <div id="root"></div>
 
-  <script src="./lib/stockfish.js"></script>
+  <script src="./lib/dratini.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mithril@2.0.4/mithril.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
@@ -112,7 +109,7 @@
 
   <script>
     let board1 = null;
-    let stockfish = null;
+    let dratini = null;
     let game = new Chess();
     let score = 0;
     let computerSide = "black";
@@ -193,17 +190,16 @@
       return { oninit, view };
     };
 
-    let stockfish_state = "INIT"; // 'READY', 'FAILED'
+    let engine_state = "INIT"; // 'READY', 'FAILED'
 
     const App = () => {
-      // let stockfish = null;
       let output = "";
       let tail_mode = true;
 
       const sendCommand = () => {
         const command = $("#command").value;
         if (command.length > 0) {
-          stockfish.postMessage(command);
+          dratini.postMessage(command);
         }
       };
 
@@ -212,10 +208,10 @@
         game.undo();
         game.undo();
         board1.position(game.fen())
-        stockfish_state = "PROCESSING..."; 
+        engine_state = "PROCESSING..."; 
         m.redraw();
         setTimeout(function(){ 
-          stockfish.postMessage("position " + game.fen());
+          dratini.postMessage("position " + game.fen());
         }, 100);
       }
 
@@ -228,11 +224,11 @@
         }
         score = -score;
         // if we flip now it's the computers' turn
-        stockfish_state = "THINKING"; 
+        engine_state = "THINKING"; 
         m.redraw();
         setTimeout(function() { 
-          stockfish.postMessage("position " + game.fen());
-          stockfish.postMessage("go");
+          dratini.postMessage("position " + game.fen());
+          dratini.postMessage("go");
         }, 100);
       }
 
@@ -243,8 +239,8 @@
         score = 0;
         m.redraw();
         if(computerSide === "white") {
-          stockfish.postMessage("position " + game.fen());
-          stockfish.postMessage("go");
+          dratini.postMessage("position " + game.fen());
+          dratini.postMessage("go");
         }
       } 
 
@@ -261,7 +257,7 @@
         if(!line.includes("bestmove")) {
           return;
         }
-        stockfish_state = "READY";
+        engine_state = "READY";
         words = line.split(" ");
         for(let i = 0; i < words.length; i++) {
           if(words[i] === "bestmove") {
@@ -297,36 +293,36 @@
       };
 
       // Make error catchable
-      const loadStockfish = async (params) => {
-        return await Stockfish(params);
+      const loadEngine = async (params) => {
+        return await Dratini(params);
       };
 
       const onFinishDownload = (data) => {
         if (!data) {
-          stockfish_state = "FAILED";
+          engine_state = "FAILED";
           m.redraw();
           return;
         }
 
-        loadStockfish({ wasmBinary: data })
-          .then((_stockfish) => {
-            stockfish = _stockfish;
-            stockfish_state = "READY";
-            stockfish.addMessageListener((line) => {
+        loadEngine({ wasmBinary: data })
+          .then((_dratini) => {
+            dratini = _dratini;
+            engine_state = "READY";
+            dratini.addMessageListener((line) => {
               parseLine(line);
               output += line + "\n";
               m.redraw();
             });
           })
           .catch((e) => {
-            stockfish_state = "FAILED";
+            engine_state = "FAILED";
             throw e;
           })
           .finally(() => m.redraw());
       };
 
       const oninit = () => {
-        stockfish_state = "LOADING";
+        engine_state = "LOADING";
       };
 
       const map = (value, x1, y1, x2, y2) => (value - x1) * (y2 - x2) / (y1 - x1) + x2;
@@ -350,7 +346,7 @@
       }
 
       const getSidebar = () => {
-        if(stockfish_state === "READY") {
+        if(engine_state === "READY") {
           return m("div#right-col", [
                 m("h3#score", { style: { "background-color": "#CBCBCB", "color": getColor(score) } }, `Score is ${score}`),
                 m("div#click", { onclick: takeBack }, "Take back"),
@@ -376,14 +372,13 @@
               m("div", [
                 "- download: ",
                 m(RequestProgress, {
-                  url: NO_EMBEDDED_NNUE
-                    ? "./lib/stockfish-no-embedded-nnue.wasm"
-                    : "./lib/stockfish.wasm",
+                  url: "./lib/dratini.wasm",
                   onFinishDownload,
                 }),
               ]),
-              m("div", `- stockfish state: ${stockfish_state}`),
-              m("div", `- the engine plays ${computerSide}`)
+              m("div", `- stockfish state: ${engine_state}`),
+              m("div", `- the engine plays ${computerSide}`),
+              m("div", `- engine's raw UCI output:`)
             ]),
             m("div#output", { onupdate: scrollOutput }, m("pre", output)),
           ]),
@@ -398,12 +393,12 @@
 
     if (!isSupported()) {
       window.alert(
-        "Your browser is not supported. For more information, please take a look at https://github.com/hi-ogawa/Stockfish/wiki."
+        "Your browser is not supported ): If you're using Chrome enable chrome://flags/#enable-webassembly-simd. If you're using Firefox enable javascript.options.wasm_simd."
       );
     }
 
     const onDrop = (source, target, piece, newPos, oldPos, orientation) => {
-      // see if the move is legal
+      // we want to check if the move is legal
       var move = game.move({
         from: source,
         to: target,
@@ -427,11 +422,11 @@
 
     const onSnapEnd = () => {
       board1.position(game.fen())
-      stockfish_state = "THINKING..."; 
+      engine_state = "THINKING..."; 
       m.redraw();
       setTimeout(function(){ 
-        stockfish.postMessage("position " + game.fen());
-        stockfish.postMessage("go");
+        dratini.postMessage("position " + game.fen());
+        dratini.postMessage("go");
       }, 100);
     }
 

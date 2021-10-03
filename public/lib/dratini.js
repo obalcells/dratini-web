@@ -1,13 +1,13 @@
 
-var Stockfish = (function() {
+var Dratini = (function() {
   var _scriptDir = typeof document !== 'undefined' && document.currentScript ? document.currentScript.src : undefined;
   if (typeof __filename !== 'undefined') _scriptDir = _scriptDir || __filename;
   return (
-function(Stockfish) {
-  Stockfish = Stockfish || {};
+function(Dratini) {
+  Dratini = Dratini || {};
 
 
-function d(){k.buffer!=l&&n(k.buffer);return aa}function t(){k.buffer!=l&&n(k.buffer);return ba}function w(){k.buffer!=l&&n(k.buffer);return da}function y(){k.buffer!=l&&n(k.buffer);return ea}function fa(){k.buffer!=l&&n(k.buffer);return ha}null;var z;z||(z=typeof Stockfish !== 'undefined' ? Stockfish : {});var ia,ja;z.ready=new Promise(function(a,b){ia=a;ja=b});
+function d(){k.buffer!=l&&n(k.buffer);return aa}function t(){k.buffer!=l&&n(k.buffer);return ba}function w(){k.buffer!=l&&n(k.buffer);return da}function y(){k.buffer!=l&&n(k.buffer);return ea}function fa(){k.buffer!=l&&n(k.buffer);return ha}null;var z;z||(z=typeof Dratini !== 'undefined' ? Dratini : {});var ia,ja;z.ready=new Promise(function(a,b){ia=a;ja=b});
 (function(){function a(){var g=e.shift();if(!b&&void 0!==g){if("quit"===g)return z.terminate();var m=z.ccall("uci_command","number",["string"],[g]);m&&e.unshift(g);h=m?2*h:1;setTimeout(a,h)}}var b=!1,c=[];z.print=function(g){0===c.length?console.log(g):setTimeout(function(){for(var m=0;m<c.length;m++)c[m](g)})};z.addMessageListener=function(g){c.push(g)};z.removeMessageListener=function(g){g=c.indexOf(g);0<=g&&c.splice(g,1)};z.terminate=function(){b=!0;A.wa()};var e=[],h=1;z.postMessage=function(g){e.push(g)};
 z.postRun=function(){z.postMessage=function(g){e.push(g);1===e.length&&a()};a()}})();var B={},C;for(C in z)z.hasOwnProperty(C)&&(B[C]=z[C]);var ka=[],la="./this.program";function ma(a,b){throw b;}var na="object"===typeof window,D="function"===typeof importScripts,E="object"===typeof process&&"object"===typeof process.versions&&"string"===typeof process.versions.node,F=z.ENVIRONMENT_IS_PTHREAD||!1,G="";function oa(a){return z.locateFile?z.locateFile(a,G):G+a}var H,I,J,K;
 if(E){G=D?require("path").dirname(G)+"/":__dirname+"/";H=function(a,b){J||(J=require("fs"));K||(K=require("path"));a=K.normalize(a);return J.readFileSync(a,b?null:"utf8")};I=function(a){a=H(a,!0);a.buffer||(a=new Uint8Array(a));assert(a.buffer);return a};1<process.argv.length&&(la=process.argv[1].replace(/\\/g,"/"));ka=process.argv.slice(2);process.on("uncaughtException",function(a){if(!(a instanceof M))throw a;});process.on("unhandledRejection",N);ma=function(a,b){if(O())throw process.exitCode=a,
@@ -21,7 +21,7 @@ function Aa(a){for(var b=0,c=0;c<a.length;++c){var e=a.charCodeAt(c);55296<=e&&5
 function n(a){l=a;z.HEAP8=aa=new Int8Array(a);z.HEAP16=new Int16Array(a);z.HEAP32=da=new Int32Array(a);z.HEAPU8=ba=new Uint8Array(a);z.HEAPU16=new Uint16Array(a);z.HEAPU32=ea=new Uint32Array(a);z.HEAPF32=new Float32Array(a);z.HEAPF64=ha=new Float64Array(a)}var Da=z.INITIAL_MEMORY||71303168;
 if(F)k=z.wasmMemory,l=z.buffer;else if(z.wasmMemory)k=z.wasmMemory;else if(k=new WebAssembly.Memory({initial:Da/65536,maximum:32768,shared:!0}),!(k.buffer instanceof SharedArrayBuffer))throw P("requested a shared WebAssembly.Memory but the returned buffer is not a SharedArrayBuffer, indicating that while the browser has SharedArrayBuffer it does not have WebAssembly threads support - you may need to set a flag"),E&&console.log("(on node you may need: --experimental-wasm-threads --experimental-wasm-bulk-memory and also use a recent version)"),
 Error("bad memory");k&&(l=k.buffer);Da=l.byteLength;n(l);var U,Ea=[],Fa=[],Ga=[],Ha=[],Ia=0;function O(){return noExitRuntime||0<Ia}function Ja(){var a=z.preRun.shift();Ea.unshift(a)}var V=0,Ka=null,W=null;z.preloadedImages={};z.preloadedAudios={};function N(a){if(F)postMessage({cmd:"onAbort",arg:a});else if(z.onAbort)z.onAbort(a);P(a);ua=!0;R=1;a=new WebAssembly.RuntimeError("abort("+a+"). Build with -s ASSERTIONS=1 for more info.");ja(a);throw a;}
-function La(){return X.startsWith("data:application/octet-stream;base64,")}var X;X="stockfish.wasm";La()||(X=oa(X));function Ma(){var a=X;try{if(a==X&&Q)return new Uint8Array(Q);if(I)return I(a);throw"both async and sync fetching of the wasm failed";}catch(b){N(b)}}
+function La(){return X.startsWith("data:application/octet-stream;base64,")}var X;X="dratini.wasm";La()||(X=oa(X));function Ma(){var a=X;try{if(a==X&&Q)return new Uint8Array(Q);if(I)return I(a);throw"both async and sync fetching of the wasm failed";}catch(b){N(b)}}
 function Na(){return Q||!na&&!D||"function"!==typeof fetch?Promise.resolve().then(function(){return Ma()}):fetch(X,{credentials:"same-origin"}).then(function(a){if(!a.ok)throw"failed to load wasm binary file at '"+X+"'";return a.arrayBuffer()}).catch(function(){return Ma()})}var Oa={};function Pa(a){for(;0<a.length;){var b=a.shift();if("function"==typeof b)b(z);else{var c=b.$a;"number"===typeof c?void 0===b.ja?U.get(c)():U.get(c)(b.ja):c(void 0===b.ja?null:b.ja)}}}
 function Qa(a,b){if(0>=a||a>d().length||a&1||0>b)return-28;if(0==b)return 0;2147483647<=b&&(b=Infinity);var c=Atomics.load(w(),Y>>2),e=0;if(c==a&&Atomics.compareExchange(w(),Y>>2,c,0)==c&&(--b,e=1,0>=b))return 1;a=Atomics.notify(w(),a>>2,b);if(0<=a)return a+e;throw"Atomics.notify returned an unexpected value "+a;}z._emscripten_futex_wake=Qa;function Ra(a){Sa(a)}z._exit=Ra;function Ta(a){a instanceof M||"unwind"==a||(P("exception thrown: "+a),ma(1,a))}
 var A={da:[],ea:[],ya:[],Ia:function(){for(var a=0;1>a;++a)A.za()},Ja:function(a){Ua(a,!D,1)},Ka:function(){A.receiveObjectTransfer=A.Ma;A.threadInit=A.Qa;A.setExitStatus=A.Oa},ba:{},xa:[],Oa:function(a){R=a},wa:function(){for(var a in A.ba){var b=A.ba[a];b&&b.worker&&A.qa(b.worker)}A.ba={};for(a=0;a<A.da.length;++a){var c=A.da[a];c.terminate()}A.da=[];for(a=0;a<A.ea.length;++a)c=A.ea[a],b=c.aa,c.terminate(),A.va(b);A.ea=[]},va:function(a){a&&(a.ga&&Va(a.ga),a.ga=0,a.ua&&a.fa&&Va(a.fa),a.fa=0,a.worker&&
@@ -29,7 +29,7 @@ var A={da:[],ea:[],ya:[],Ia:function(){for(var a=0;1>a;++a)A.za()},Ja:function(a
 e.targetThread+", but that thread no longer exists!")}else if("processQueuedMainThreadWork"===h)Ya();else if("spawnThread"===h)Za(c.data);else if("cleanupThread"===h){c=e.thread;if(F)throw"Internal Error! cleanupThread() can only ever be called from main application thread!";if(!c)throw"Internal Error! Null pthread_ptr in cleanupThread!";if(e=A.ba[c])w()[c+8>>2]=0,A.qa(e.worker)}else if("killThread"===h){c=e.thread;if(F)throw"Internal Error! killThread() can only ever be called from main application thread!";
 if(!c)throw"Internal Error! Null pthread_ptr in killThread!";w()[c+8>>2]=0;e=A.ba[c];delete A.ba[c];e.worker.terminate();A.va(e);A.ea.splice(A.ea.indexOf(e.worker),1);e.worker.aa=void 0}else if("cancelThread"===h){c=e.thread;if(F)throw"Internal Error! cancelThread() can only ever be called from main application thread!";if(!c)throw"Internal Error! Null pthread_ptr in cancelThread!";A.ba[c].worker.postMessage({cmd:"cancel"})}else if("loaded"===h)a.loaded=!0,b&&b(a),a.ka&&(a.ka(),delete a.ka);else if("print"===
 h)ra("Thread "+e.threadId+": "+e.text);else if("printErr"===h)P("Thread "+e.threadId+": "+e.text);else if("alert"===h)alert("Thread "+e.threadId+": "+e.text);else if("exit"===h)a.aa&&Atomics.load(y(),a.aa.ga+60>>2)&&A.qa(a);else if("exitProcess"===h)try{Sa(e.returnCode)}catch(m){Ta(m)}else if("cancelDone"===h)A.qa(a);else if("setimmediate"===c.data.target)a.postMessage(c.data);else if("onAbort"===h){if(z.onAbort)z.onAbort(e.arg)}else P("worker sent an unknown command "+h);A.Ea=void 0};a.onerror=function(c){P("pthread sent an error! "+
-c.filename+":"+c.lineno+": "+c.message);throw c;};E&&(a.on("message",function(c){a.onmessage({data:c})}),a.on("error",function(c){a.onerror(c)}),a.on("exit",function(){}));a.postMessage({cmd:"load",urlOrBlob:z.mainScriptUrlOrBlob||_scriptDir,wasmMemory:k,wasmModule:ta})},za:function(){var a=oa("stockfish.worker.js");A.da.push(new Worker(a))},Ga:function(){0==A.da.length&&(A.za(),A.Ca(A.da[0]));return A.da.pop()}};z.establishStackSpace=function(a,b){$a(a,b);ab(a)};z.invokeEntryPoint=function(a,b){return U.get(a)(b)};
+c.filename+":"+c.lineno+": "+c.message);throw c;};E&&(a.on("message",function(c){a.onmessage({data:c})}),a.on("error",function(c){a.onerror(c)}),a.on("exit",function(){}));a.postMessage({cmd:"load",urlOrBlob:z.mainScriptUrlOrBlob||_scriptDir,wasmMemory:k,wasmModule:ta})},za:function(){var a=oa("dratini.worker.js");A.da.push(new Worker(a))},Ga:function(){0==A.da.length&&(A.za(),A.Ca(A.da[0]));return A.da.pop()}};z.establishStackSpace=function(a,b){$a(a,b);ab(a)};z.invokeEntryPoint=function(a,b){return U.get(a)(b)};
 var bb;bb=E?function(){var a=process.hrtime();return 1E3*a[0]+a[1]/1E6}:F?function(){return performance.now()-z.__performance_now_clock_drift}:function(){return performance.now()};
 function Za(a){if(F)throw"Internal Error! spawnThread() can only ever be called from main application thread!";var b=A.Ga();if(!b)return 6;if(void 0!==b.aa)throw"Internal error!";if(!a.pa)throw"Internal error, no pthread ptr!";A.ea.push(b);var c=a.fa+a.ha,e=A.ba[a.pa]={worker:b,fa:a.fa,ha:a.ha,ua:a.ua,ga:a.pa},h=e.ga>>2;Atomics.store(y(),h+15,a.detached);Atomics.store(y(),h+19,a.ha);Atomics.store(y(),h+18,c);Atomics.store(y(),h+25,a.ha);Atomics.store(y(),h+27,c);Atomics.store(y(),h+28,a.detached);
 b.aa=e;var g={cmd:"run",start_routine:a.Pa,arg:a.ja,threadInfoStruct:a.pa,stackBase:a.fa,stackSize:a.ha};b.ka=function(){g.time=performance.now();b.postMessage(g,a.Va)};b.loaded&&(b.ka(),delete b.ka);return 0}function Z(a,b){for(var c=arguments.length-2,e=cb(),h=T(8*c),g=h>>3,m=0;m<c;m++){var p=arguments[2+m];fa()[g+m]=p}c=db(a,c,h,b);ab(e);return c}var eb=[],fb=[0,"undefined"!==typeof document?document:0,"undefined"!==typeof window?window:0];
@@ -73,13 +73,13 @@ F||Pa(Fa),postMessage({cmd:"loaded"});else{if(!F){if(z.preRun)for("function"==ty
 if(z.preInit)for("function"==typeof z.preInit&&(z.preInit=[z.preInit]);0<z.preInit.length;)z.preInit.pop()();var Wb=!0;z.noInitialRun&&(Wb=!1);F&&(noExitRuntime=!1,A.Ka());Vb();
 
 
-  return Stockfish.ready
+  return Dratini.ready
 }
 );
 })();
 if (typeof exports === 'object' && typeof module === 'object')
-  module.exports = Stockfish;
+  module.exports = Dratini;
 else if (typeof define === 'function' && define['amd'])
-  define([], function() { return Stockfish; });
+  define([], function() { return Dratini; });
 else if (typeof exports === 'object')
-  exports["Stockfish"] = Stockfish;
+  exports["Dratini"] = Dratini;
